@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/contact_background"
+    tools:context=".UI.ContactActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_controlRoom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/teal_200"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ToolbarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/progressLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
+        app:tashieloader_animDelay="150"
+        app:tashieloader_animDur="500"
+        app:tashieloader_dotsColor="@color/purple_200"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="10dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="6" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginTop="60dp"
+        android:id="@+id/relt_appt"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_controlRoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+        <TextView
+            android:id="@+id/home_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="CONTROL ROOM"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image_home"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/home_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="12dp"
+            android:src="@drawable/isolation" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_home"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="In case of any health emergency, contact the numbers given below"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewContacts"
+            android:layout_below="@id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/emergency_contact_card"/>
+        <!--<LinearLayout
+            android:id="@+id/gen_no"
+            android:layout_below="@id/message"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+                <TextView
+                    android:layout_weight="1.5"
+                    android:id="@+id/no_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="2dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginVertical="2dp"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="4dp"
+                    android:text="03267967121"
+                    android:textColor="@color/purple_500" />
+            <TextView
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/purple_500"
+                android:text=""
+                />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/gen_no"
+            android:layout_margin="4dp"
+            android:background="#000000"
+            />
+<LinearLayout
+    android:layout_marginBottom="4dp"
+    android:id="@+id/med_no"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/gen_no"
+    android:orientation="horizontal"
+    android:weightSum="3">
+        <LinearLayout
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/message"
+            android:orientation="vertical">
+        <TextView
+            android:id="@+id/no_med_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:layout_marginVertical="2dp"
+            android:drawableStart="@drawable/ic_phone"
+            android:drawablePadding="4dp"
+            android:text="0326-7961726"
+            android:textColor="@color/purple_500" />
+            <TextView
+                android:id="@+id/no_med_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2dp"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="4dp"
+                android:text="0326-7961004"
+                android:textColor="@color/purple_500" />
+        </LinearLayout>
+    <TextView
+        android:layout_weight="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/purple_500"
+        android:text="HelpLine numbers for Medical consultancy"
+        android:gravity="center_vertical"/>
+
+</LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/med_no"
+            android:layout_margin="4dp"
+            android:background="#000000"
+            />
+        <LinearLayout
+            android:layout_marginBottom="4dp"
+            android:id="@+id/ment_no"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/med_no"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/no_ment_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="4dp"
+                    android:text="+916202678077"
+                    android:textColor="@color/purple_500" />
+                <TextView
+                    android:id="@+id/no_ment_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="4dp"
+                    android:text="+917979725412"
+                    android:textColor="@color/purple_500" />
+            </LinearLayout>
+            <TextView
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:text="HelpLine numbers for Mental consultancy"
+                android:gravity="center_vertical"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/ment_no"
+            android:layout_margin="4dp"
+            android:background="#000000"
+            />
+        <LinearLayout
+            android:layout_marginBottom="4dp"
+            android:id="@+id/hos_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ment_no"
+            android:orientation="horizontal"
+            android:weightSum="3">
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/message"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/no_hos_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:layout_marginVertical="2dp"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="4dp"
+                    android:text="03267967315"
+                    android:textColor="@color/purple_500" />
+                <TextView
+                    android:id="@+id/no_hos_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="2dp"
+                    android:drawableStart="@drawable/ic_phone"
+                    android:drawablePadding="4dp"
+                    android:text="03267967316"
+                    android:textColor="@color/purple_500" />
+            </LinearLayout>
+            <TextView
+                android:layout_weight="1.5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/purple_500"
+                android:text="HelpLine numbers for Hospital Bed Management"
+                android:gravity="center_vertical"/>
+        </LinearLayout>-->
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:elevation="20dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/TextAppearance.AppCompat.Headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Send SOS Alert"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/alert_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:hint="Enter Alert Message"
+                android:maxHeight="70dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/sos_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/black_border_background"
+                android:text="Send Alert"
+                android:textColor="#FFC107"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/alert_message" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".UI.UpdateActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9be5aa"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/MenuuStyle">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/register_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:text="Upload You Daily Record"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tool_bar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="20dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_pulse"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pulse Rate (bpm)"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_bph"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/text_pulse"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="BP high"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_bpl"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/text_bph"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="BP low"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_spo2"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/text_bpl"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="SPO2"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_rate"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_below="@id/text_spo2"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Respiratory Rate"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_temp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_rate"
+                android:layout_marginTop="8dp"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeErrorColor="@android:color/holo_red_light"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Tempearature"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/home_photos_btn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_temp"
+                android:layout_marginTop="32dp"
+                android:background="#9be5aa"
+                android:text="Proof Image"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/home_photos_btn2"
+                android:layout_alignBottom="@+id/home_photos_btn2"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_toEndOf="@+id/home_photos_btn2"
+                android:gravity="center"
+                android:text="Temperature, BP and SPO2 Proof"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image1"
+                android:layout_marginTop="8dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/home_photos_btn2"/>
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image2"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/home_photos_btn2"
+                android:layout_toEndOf="@id/image1"/>
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/image3"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/home_photos_btn2"
+                android:layout_toEndOf="@id/image2"/>
+
+            <LinearLayout
+                android:id="@+id/GPSlocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image1"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="3"
+                    android:text="Add Home Location"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/buttonPicLocation"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:drawableEnd="@drawable/ic_baseline_add_location_alt_24"
+                    android:text="Get Location"
+                    app:tint="#2196F3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Long"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/GPSlocation"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Long_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="5"
+                    android:text="GPS Longitude"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/input_Long"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="N/A"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Lat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Long"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/Lat_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:layout_weight="5"
+                    android:text="GPS Latitude"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/input_Lat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:text="N/A"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/request_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Lat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/button_style"
+                android:paddingHorizontal="4dp"
+                android:text="Upload"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

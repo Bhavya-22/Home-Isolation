@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp">
+    <LinearLayout
+        android:padding="4dp"
+        android:id="@+id/not_card"
+        android:background="@drawable/pres_bg"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="7">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/not_img" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/not_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Title"
+                android:textColor="#30333c"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/not_mess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/not_title"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/arima_madurai_light"
+                android:maxLines="2"
+                android:text="Message"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:layout_below="@id/not_mess"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/not_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="date"
+                    android:layout_gravity="center"
+                    android:textColor="#30333c"
+                    android:layout_weight="1"
+                    android:textSize="12sp"/>
+                <TextView
+                    android:id="@+id/not_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="time"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:layout_marginEnd="4dp"
+                    android:textColor="#30333c"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

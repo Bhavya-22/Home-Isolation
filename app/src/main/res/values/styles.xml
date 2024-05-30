@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MenuuStyle" parent="Theme.AppCompat.Light">
+        <item name="android:background">#9be5aa
+        </item>
+    </style>
+
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ResetEditTextTheme" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorControlActivated">@color/purple_500</item>
+    </style>
+</resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView_health"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/report_bg"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/tot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="right"
+            android:text="Time of Test"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/pulse_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tot"
+            android:layout_marginStart="8dp"
+            android:text="Pulse: "
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/pulse_txt_value"
+            style="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/pulse_txt"
+            android:layout_alignBottom="@id/pulse_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:text="abc "
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/temp_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pulse_txt"
+            android:layout_marginStart="8dp"
+            android:text="Temperature: "
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/temp_txt_value"
+            style="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/temp_txt"
+            android:layout_alignBottom="@id/temp_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:text="abc1"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bplow_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temp_txt"
+            android:layout_marginStart="8dp"
+            android:text="BP(Low): "
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bplow_txt_value"
+            style="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/bplow_txt"
+            android:layout_alignBottom="@id/bplow_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:text="abc2"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/bphigh_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bplow_txt"
+            android:layout_marginStart="8dp"
+            android:text="BP(High): "
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/bphigh_txt_value"
+            style="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/bphigh_txt"
+            android:layout_alignBottom="@id/bphigh_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:text="abc3"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/spO2_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bphigh_txt"
+            android:layout_marginStart="8dp"
+            android:text="SPO2: "
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/spO2_txt_value"
+            style="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/spO2_txt"
+            android:layout_alignBottom="@id/spO2_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:text="abc4"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resr_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spO2_txt"
+            android:layout_marginStart="8dp"
+            android:text="Respiratory Rate: "
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/resr_txt_value"
+            style="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/resr_txt"
+            android:layout_alignBottom="@id/resr_txt"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="abc5"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

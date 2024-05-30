@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    app:cardCornerRadius="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:gravity="center"
+                    android:text="Create Home Isolation Request"
+                    android:textColor="@color/teal_200"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Personal Details"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/srfId"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/text1"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="SRF ID"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="13"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/dateOfTest_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/consultingDoctor"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Date of Test"
+                    android:textSize="16sp" />
+
+                <DatePicker
+                    android:id="@+id/dateOfTest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateOfTest_txt"
+                    android:layout_marginTop="10dp"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:forceDarkAllowed="true"
+                    android:startYear="2020"
+                    android:yearListSelectorColor="#FFFFFF" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/srfId"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Your Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!--<LinearLayout
+                    android:id="@+id/phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/name"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">-->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_number"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/name"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Phone Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="10" />
+                </com.google.android.material.textfield.TextInputLayout>
+                <!--</LinearLayout>-->
+
+                <TextView
+                    android:id="@+id/dob_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/input_number"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Date of Birth"
+                    android:textSize="16sp" />
+
+                <DatePicker
+                    android:id="@+id/dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dob_txt"
+                    android:calendarViewShown="false"
+                    android:datePickerMode="spinner"
+                    android:startYear="1975"
+                    android:forceDarkAllowed="true"
+                    android:yearListSelectorColor="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/gender_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dob"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Gender"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:layout_below="@id/gender_txt"
+                    android:id="@+id/genderSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/gender_txt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@drawable/black_border_background"
+                    android:padding="10dp" />
+
+                <TextView
+                    android:id="@+id/address_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dateOfTest"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Address Details"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/address_txt">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/houseno"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="8dp"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeErrorColor="@android:color/holo_red_light"
+                        app:errorIconTint="@android:color/holo_red_light"
+                        app:errorTextColor="@android:color/holo_red_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="House No,Building Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColorHint="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/roadno"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/houseno"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="8dp"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeErrorColor="@android:color/holo_red_light"
+                        app:errorIconTint="@android:color/holo_red_light"
+                        app:errorTextColor="@android:color/holo_red_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Road No,Area Colony"
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColorHint="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/wardNo"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/roadno"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="8dp"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeErrorColor="@android:color/holo_red_light"
+                        app:errorIconTint="@android:color/holo_red_light"
+                        app:errorTextColor="@android:color/holo_red_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Ward Number/Panchayat"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textColorHint="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/landmark"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/wardNo"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="8dp"
+                        app:boxBackgroundColor="@color/white"
+                        app:boxStrokeErrorColor="@android:color/holo_red_light"
+                        app:errorIconTint="@android:color/holo_red_light"
+                        app:errorTextColor="@android:color/holo_red_light">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Landmark/ P.S."
+                            android:imeOptions="actionNext"
+                            android:inputType="textMultiLine"
+                            android:textColorHint="@color/black" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/city_state_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/landmark"
+                        android:layout_marginTop="13dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="10dp"
+                            android:layout_weight="1"
+                            android:text="State | District | Block"
+                            android:textSize="18sp" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/stateSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/black_border_background"
+                            android:padding="10dp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/districtSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/black_border_background"
+                            android:padding="10dp"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/blockSpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="2dp"
+                            android:background="@drawable/black_border_background"
+                            android:padding="10dp"
+                            android:visibility="gone" />
+
+                        <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+                            android:id="@+id/progressLoader"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10dp"
+                            android:visibility="visible"
+                            app:tashieloader_animDelay="150"
+                            app:tashieloader_animDur="500"
+                            app:tashieloader_dotsColor="@color/purple_200"
+                            app:tashieloader_dotsDist="5dp"
+                            app:tashieloader_dotsRadius="5dp"
+                            app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+                            app:tashieloader_noOfDots="6" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/address"
+                    android:layout_marginTop="22dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Basic Details"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/caretaker_name"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/genderSpinner"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Caretaker's Name"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/caretakerNumber"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/caretaker_name"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Caretaker's Phone Number"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLength="10" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/consultingDoctor"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/caretakerNumber"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Name of Consulting Doctor"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/adhar_fnt_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text3"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Aadhar Front"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/adhar_fnt_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adhar_fnt_txt"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/adhar_fnt_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="4dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:textColor="@color/yellow"
+                        app:backgroundTint="@color/white"
+                        app:strokeColor="@color/black"
+                        android:text="Upload"
+                        app:strokeWidth="1dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/adhar_fnt_img"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/adhar_back_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adhar_fnt_layout"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Aadhar Back"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/adhar_back_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adhar_back_txt"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/adhar_back_btn"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="4dp"
+                        android:text="Upload"
+                        android:textColor="@color/yellow"
+                        app:backgroundTint="@color/white"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="1dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/adhar_back_image"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/noOfMembers"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Total Number Of Family Members"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/noOfSeniors"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noOfMembers"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Total Number Of Family Members Above 60"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/noOfChildren"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noOfSeniors"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Total Number Of Family Members Below 10"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/noOfRooms"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noOfChildren"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Number Of Rooms"
+                        android:imeOptions="actionNext"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/noOfWashRooms"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noOfRooms"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    app:boxBackgroundColor="@color/white"
+                    app:boxStrokeErrorColor="@android:color/holo_red_light"
+                    app:errorIconTint="@android:color/holo_red_light"
+                    app:errorTextColor="@android:color/holo_red_light">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Number Of WashRooms"
+                        android:imeOptions="actionDone"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/check_hasAttached"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/noOfWashRooms"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="13dp"
+                    android:text="Is an attached washroom available in the room where you will be staying?"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/check_wasHospitalised"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/check_hasAttached"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="13dp"
+                    android:text="Were you hospitalised earlier?"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/text_result"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/check_wasHospitalised"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="What Is Your Test Result ?"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+                <RadioGroup
+                    android:layout_marginTop="12dp"
+                    android:id="@+id/radio_testresult"
+                    android:layout_below="@id/text_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_positive"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Positive"
+                        android:textSize="16sp"
+                        android:checked="true"/>
+
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/radio_negative"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Negative"
+                        android:textSize="16sp"/>
+                </RadioGroup>
+
+                <include
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/disease_layout"
+                    layout="@layout/disease"
+                    android:layout_below="@id/radio_testresult"/>
+
+
+                <TextView
+                    android:id="@+id/text3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/disease_layout"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Upload Documents"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/text4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_img_layout"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Location Details"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/washroom_photos_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/adhar_back_layout"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Washrooms Photos (*2)"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/washroom_img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/washroom_photos_txt"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/washroom_photos_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginHorizontal="10dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:textColor="@color/yellow"
+                        app:backgroundTint="@color/white"
+                        app:strokeColor="@color/black"
+                        android:text="Upload"
+                        app:strokeWidth="1dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageWashroom1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageWashroom2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@+id/imageWashroom1" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/home_photos_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/washroom_img_layout"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Home photos (*5)"
+                    android:textSize="16sp" />
+
+                <RelativeLayout
+                    android:id="@+id/home_img_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_photos_txt"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/home_photos_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:textColor="@color/yellow"
+                        app:backgroundTint="@color/white"
+                        app:strokeColor="@color/black"
+                        android:text="Upload"
+                        app:strokeWidth="1dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageHome1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageHome2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_toStartOf="@+id/imageHome1" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageHome3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_toStartOf="@+id/imageHome2" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageHome4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="2dp"
+                        android:layout_toStartOf="@+id/imageHome3" />
+
+                    <com.mikhaellopez.circularimageview.CircularImageView
+                        android:id="@+id/imageHome5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toStartOf="@+id/imageHome4" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/GPSlocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text4"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="3"
+                        android:text="Add Home Location"
+                        android:textSize="16sp" />
+
+                    <ProgressBar
+                        android:id="@+id/progressSearchingGPS"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:visibility="gone"
+                        app:tint="#2196F3" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/buttonPicLocation"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/ic_baseline_add_location_alt_24"
+                        android:text="Pick Location" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Long"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/GPSlocation"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Long_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Longitude"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/input_Long"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="N/A"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Lat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Long"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Lat_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:text="Latitude"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/input_Lat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:text="N/A"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/terms_condn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Lat"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/check_condition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="I agree to the "
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/term_conditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terms_conditions"
+                        android:textColor="@android:color/holo_blue_light" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/def_pswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/terms_condn"
+                    android:layout_marginTop="10dp"
+                    android:text="After successful registration, your default password will be your phone number."/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/request_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/def_pswd"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:paddingHorizontal="4dp"
+                    android:text="REQUEST HOME ISOLATION"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

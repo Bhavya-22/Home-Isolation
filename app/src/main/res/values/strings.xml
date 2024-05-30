@@ -1,0 +1,97 @@
+<resources>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="app_name">HIMMAT</string>
+    <string name="guidelines_header">
+        DAILY SCHEDULE FOR HOME ISOLATION FOR MILD COVID PATIENTS\n
+        (NOT A SUBSTITUTE FOR DOCTOR’S ADVICE)
+    </string>
+
+    <string name="guidelines_head_1">1. 7AM to 9AM</string>
+
+    <string name="guidelines_1">
+        \nCheck temperature\n
+        \nCheck Oxygen SpO2 saturation levels using an oxymeter (if below 94%, consult a doctor)\n
+        \nTake one tablet of Pantoprazole 40mg\n
+        \n(any brand for example Pan) with water\n
+        \nGargle with Chlorhexidine or salt water\n
+    </string>
+
+    <string name="guidelines_head_2">2. 9AM to 11AM</string>
+
+    <string name="guidelines_2">
+        \nSteam inhalation (preferably with the green capsule, any brand)\n
+        \nGargle with Chlorhexidine or salt water.\n
+        \n(Only if recommended by a doctor) Azithromycin 500mg.\n
+        \nVitamin ‘C’ tablet (any brand, Limcee is one of them).\n
+        \nZinc and Multi-vitamin tablets (any brand, Zincovit is one of them)\n
+        \nParacetamol (if fever or aches, available in many brands e.g. Dolo, Calpol, Crocin, Paracip)\n
+        \nAny other medicine recommended post breakfast by the doctor.\n
+        \nTake a fruit (coconut water cheekoo/sapota, apple, any fruit that you like)\n
+    </string>
+
+
+    <string name="guidelines_head_3">3. 11AM to 01PM</string>
+
+    <string name="guidelines_3">
+        \nCheck temperature\n
+        \nTake the 6 minutes walk test (walk for 6 minutes normally, check oxygen SpO2 saturation levels before and after the walk (if below 94%, consult a doctor immediately). If you can’t do the 6 minutes walk, check oxygen normally.\n
+        \nLunch\n
+        \nVitamin ‘D3’ (any brand, for example- Uprise) ONLY ONCE A WEEK. Not more than ONCE A WEEK.\n
+        \n Any other medicine post lunch advised by doctor.\n
+    </string>
+
+
+    <string name="guidelines_head_4">4. 01PM to 4PM</string>
+
+    <string name="guidelines_4">
+        \nRest adequately\n
+        \nSteam inhalation (preferably with the green capsule, any brand)\n
+        \nDrink Karha/Kahwa (Kashmiri Tea)/ any warm beverage if Kahwa not available.\n
+        \nVitamin ‘C’ tablet (any brand, Limcee is one of them)\n
+    </string>
+
+
+    <string name="guidelines_head_5">5. 4PM to 6PM</string>
+
+    <string name="guidelines_5">
+        \nCheck Temperature.\n
+        \nCheck Oxygen SpO2 saturation levels using an oxymeter (If below 94% consult a doctor immediately).\n
+        \nDrink coconut water.\n
+        \nVitamin ‘C’ tablet (any brand, Limcee is one of them).\n
+        \nParacetamol (If fever or aches, available in many brands e.g. Dolo, Calpol, Crocin, Paracip)\n
+    </string>
+
+
+    <string name="guidelines_head_6">6. 6PM to 7PM</string>
+
+    <string name="guidelines_6">
+        \nSteam inhalation (preferably with the green capsule, any brand).\n
+        \nGargle with chlorhexidine or salt water.\n
+        \nHave a soup.\n
+    </string>
+
+    <string name="guidelines_head_7">7. 7PM to 9PM</string>
+
+    <string name="guidelines_7">
+        \nCheck temperature\n
+        \nCheck oxygen SpO2 saturation levels using an oxymeter (If below 94% consult a doctor immediately)\n
+        \nDinner\n
+        \nParacetamol (if fever or aches, available in many brands e.g. Dolo, Calpol, Crocin, Paracip)\n
+    </string>
+
+    <string name="guidelines_head_8">8. 9PM to Bedtime</string>
+
+    <string name="guidelines_8">
+        \nCheck temperature.\n
+        \nCheck oxygen SpO2 saturation levels using an oxymeter (if below 94% consult a doctor immediately)\n
+        \nSteam inhalation (preferably with the green capsule, any brand)\n
+        \nAny warm drink (Milk with Haldi (turmeric) or karha (kadha) or hot water)\n
+        \nCongratulate yourself on following this routine.\n
+        \nWrite a diary, speak with friends, listen to music, make a vacation plan for the next 2 year - do anything else you like to do\n
+        \nBe grateful and sleep with a positive attitude.\n
+    </string>
+
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="no_data_found">No Data found</string>
+</resources>

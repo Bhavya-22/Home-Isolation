@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="4dp"
+    android:id="@+id/cardView_health"
+    app:cardCornerRadius="8dp"
+    app:cardUseCompatPadding="true"
+    app:cardElevation="4dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter Your Details"
+            android:layout_margin="12dp"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:id="@+id/tot"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pulse_temp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/tot"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="10dp"
+                android:id="@+id/pulse"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="2dp"
+                app:boxStrokeColor="@android:color/holo_red_light"
+                app:errorEnabled="true"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Pulse"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="10dp"
+                android:id="@+id/temp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="@android:color/holo_red_light"
+                app:errorEnabled="true"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Temperature"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bp_low_high"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/pulse_temp"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="10dp"
+                android:id="@+id/bp_high"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="2dp"
+                app:boxStrokeColor="@android:color/holo_red_light"
+                app:errorEnabled="true"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="BP(High)"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1">
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="10dp"
+                android:id="@+id/bp_low"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="@android:color/holo_red_light"
+                app:errorEnabled="true"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="BP(Low)"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spO2_resr"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/bp_low_high"
+            android:orientation="horizontal">
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="10dp"
+                android:id="@+id/spO2"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="2dp"
+                app:boxStrokeColor="@android:color/holo_red_light"
+                app:errorEnabled="true"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="SPO2"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                app:boxBackgroundColor="@color/white"
+                android:layout_width="10dp"
+                android:id="@+id/resr"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="20dp"
+                app:boxStrokeColor="@android:color/holo_red_light"
+                app:errorEnabled="true"
+                app:errorIconTint="@android:color/holo_red_light"
+                app:errorTextColor="@android:color/holo_red_light"
+                android:layout_weight="1">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:hint="Respiratory Rate"
+                    android:imeOptions="actionNext"
+                    android:layout_weight="1">
+                </com.google.android.material.textfield.TextInputEditText>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_below="@id/spO2_resr"
+            android:id="@+id/temp_proof_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature Proof(image)"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/temp_img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temp_proof_txt"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/temp_proof_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#9be5aa"
+                android:text="Upload"
+                android:textColor="@color/white" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/tempProfImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@id/temp_img_layout"
+            android:id="@+id/bp_proof_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BP Proof(image)"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/bp_img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bp_proof_txt"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/bp_proof_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#9be5aa"
+                android:text="Upload"
+                android:textColor="@color/white" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/bpProfImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_below="@id/bp_img_layout"
+            android:id="@+id/spO2_proof_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SPO2 Proof(image)"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/spO2_img_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spO2_proof_txt"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/spO2_proof_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#9be5aa"
+                android:text="Upload"
+                android:textColor="@color/white" />
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/spO2ProfImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/contact_background"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/relt_appt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15"
+        tools:layout_editor_absoluteX="16dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/app_logo" />
+
+        <ImageView
+            android:id="@+id/app_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/app_txt"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginVertical="8dp"
+            android:src="@drawable/mask"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <TextView
+            android:id="@+id/app_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="Home Isolation Monitoring Movement And Tracking"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+    </RelativeLayout>
+
+    <com.agrawalsuneet.dotsloader.loaders.TashieLoader
+        android:id="@+id/tashieLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relt_appt"
+        app:tashieloader_animDelay="100"
+        app:tashieloader_animDur="500"
+        app:tashieloader_dotsColor="@android:color/holo_red_light"
+        app:tashieloader_dotsDist="5dp"
+        app:tashieloader_dotsRadius="7dp"
+        app:tashieloader_interpolator="@android:anim/accelerate_interpolator"
+        app:tashieloader_noOfDots="6" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:text="District Administration\nDhanbad"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

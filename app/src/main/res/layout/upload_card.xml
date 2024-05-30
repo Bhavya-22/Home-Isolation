@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="0dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginStart="4dp"
+    android:layout_marginEnd="4dp">
+
+    <LinearLayout
+        android:padding="8dp"
+        android:background="@drawable/pres_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/med_rep" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Title"
+                android:textColor="#30333c"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <ImageView
+                android:layout_below="@id/title"
+                android:id="@+id/doc_link_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_baseline_link_24"
+                app:tint="#0925BA" />
+
+            <TextView
+                android:id="@+id/docum_link_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/doc_link_img"
+                android:layout_alignBottom="@id/doc_link_img"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/doc_link_img"
+                android:text="View Document"
+                android:textColor="#0925BA"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/date_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/docum_link_text"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_baseline_calendar_today_24"
+                app:tint="#30333c" />
+
+            <TextView
+                android:id="@+id/doc_date_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/date_img"
+                android:layout_alignBottom="@id/date_img"
+                android:layout_marginStart="4dp"
+                android:layout_toEndOf="@id/date_img"
+                android:text="Dat:"
+                android:textColor="#30333c"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

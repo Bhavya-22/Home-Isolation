@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="vibgyorg">
+        "@android:color/holo_green_light",
+        "@android:color/holo_red_light",
+        "@color/purple_200",
+        "@android:color/holo_orange_light",
+        "@android:color/holo_blue_light"
+    </string-array>
+</resources>

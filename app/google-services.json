@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "687968140617",
+    "project_id": "himmat-1b886",
+    "storage_bucket": "himmat-1b886.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687968140617:android:5f2f83678d60e79af5ee98",
+        "android_client_info": {
+          "package_name": "com.isolate.egovdhn.in"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "687968140617-d1043bgh6hs5i7ha84vvp9oh50eedtqd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.isolate.egovdhn.in",
+            "certificate_hash": "ec0ec8ac751684131ae93abd551083cac11437c7"
+          }
+        },
+        {
+          "client_id": "687968140617-fp9mhj1kbnif4qplqancqm84t5ruk3h8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.isolate.egovdhn.in",
+            "certificate_hash": "4ce262964dc66d8217674f5d1ab30b0c9ad8f596"
+          }
+        },
+        {
+          "client_id": "687968140617-hg54e3tdi1k18eg2khaltu6dk3na8ng8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoL3z5khcW1z8yQTQg7oz20hs0a_887yw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "687968140617-hg54e3tdi1k18eg2khaltu6dk3na8ng8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

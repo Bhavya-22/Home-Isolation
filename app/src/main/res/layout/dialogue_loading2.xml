@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="20dp"
+    app:cardCornerRadius="20dp">
+
+    <com.agrawalsuneet.dotsloader.loaders.PullInLoader
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:pullin_animDur="3000"
+        app:pullin_bigCircleRadius="42dp"
+        app:pullin_dotsColor="@color/teal_700"
+        app:pullin_dotsRadius="10dp"
+        app:pullin_useMultipleColors="true" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
